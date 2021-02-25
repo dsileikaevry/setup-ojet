@@ -29,6 +29,7 @@ export async function installCordova(version?: string): Promise<void> {
  */
 export async function installOjet(version?: string): Promise<void> {
   await installNpmPkg('@oracle/ojet-cli', version)
+  await installNpmPkg('@oracle/oraclejet-tooling', version)
 }
 
 /**
