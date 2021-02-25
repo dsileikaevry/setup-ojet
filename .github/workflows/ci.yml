@@ -31,8 +31,8 @@ jobs:
     - name: Create test Oracle JET application
       run: | 
         ojet create myHybridApp
-        cd myHybridApp
-        npm install  
+        cd myHybridApp 
         # ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer 
+        ojet build
         ojet strip
         ojet clean
