@@ -14,6 +14,7 @@ jobs:
       with:
         node-version: '12'
     - run: |
+        npm-cache clean
         npm ci
         npm run all
   test: # make sure the action works on a clean machine without building
@@ -29,7 +30,7 @@ jobs:
     - name: Use dsileikaevry/setup-ojet
       uses: ./
     - name: Create test Oracle JET application
-      run: |
+      run: | 
         ojet create myHybridApp
         cd myHybridApp
         npm install 
