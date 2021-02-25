@@ -6759,6 +6759,7 @@ function installCordova(version) {
         // Fix access permissions
         yield exec2(`sudo chown -R $USER:$GROUP ~/.npm`);
         yield exec2(`sudo chown -R $USER:$GROUP ~/.config`);
+        yield exec2(`sudo chown -R $USER:$GROUP ~/.cordova`);
     });
 }
 exports.installCordova = installCordova;
