@@ -33,8 +33,7 @@ jobs:
         ojet create myHybridApp
         cd myHybridApp
         npm install 
-        ojet add sass
-        ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer
+        # ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer
         ojet build
         ojet strip
         ojet clean
