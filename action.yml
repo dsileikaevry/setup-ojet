@@ -14,10 +14,10 @@ inputs:
     default: '10.0.0'
   install-java:
     description: Whether to install Java
-    default: true
+    default: false
   install-pods:
     description: Whether to install CocoaPods
-    default: true
+    default: false
 
 runs:
   using: 'node12'
