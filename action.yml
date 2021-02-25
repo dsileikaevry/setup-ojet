@@ -11,7 +11,7 @@ inputs:
     default: '10'
   ojet-version:
     description: Version range or exact version of Oracle JET CI to use
-    default: '10.0.0'
+    default: '8.0.0'
   install-java:
     description: Whether to install Java
     default: false
