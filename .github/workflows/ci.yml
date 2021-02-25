@@ -32,9 +32,7 @@ jobs:
       run: | 
         ojet create myHybridApp
         cd myHybridApp
-        npm install 
-        npm install @oracle/ojet-cli --save
-        # ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer
-        ojet build
+        npm install  
+        # ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer 
         ojet strip
         ojet clean
