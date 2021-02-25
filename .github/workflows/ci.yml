@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: joschi/setup-jdk@v2 
-      with:
-        java-version: '8'
     - run: |
         npm ci
         npm run all
@@ -21,10 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: joschi/setup-jdk@v2 
+      with:
+        java-version: '8'
     - name: Use dsileikaevry/setup-ojet
       uses: ./
     - name: Create test Oracle JET application
       run: |
         ojet create myHybridApp --hybrid --appid="com.oracle.myApp" --appname="My App" --platforms=ios,android --template=blank
         cd myHybridApp
-        ojet build android 
+        ojet build android
