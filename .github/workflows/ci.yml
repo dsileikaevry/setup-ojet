@@ -33,6 +33,5 @@ jobs:
         ojet create myHybridApp
         cd myHybridApp 
         # ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer 
-        ojet build
-        ojet strip
+        ojet build 
         ojet clean
