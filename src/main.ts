@@ -31,7 +31,7 @@ async function run(): Promise<void> {
     await installPods()
 
     // run `ionic info`
-    await logInstalledInfo()
+    // await logInstalledInfo()
   } catch (error) {
     core.setFailed(error.message)
   }
