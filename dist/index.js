@@ -1979,7 +1979,7 @@ function run() {
                 yield installer_1.installOjet(ojetVersion);
             }
             // install specific version of java and gradle
-            // await installJava();
+            yield installer_1.installJava();
             // install cocoapods
             yield installer_1.installPods();
             // run `ionic info`

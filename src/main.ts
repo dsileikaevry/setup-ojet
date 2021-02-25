@@ -25,7 +25,7 @@ async function run(): Promise<void> {
     }
 
     // install specific version of java and gradle
-    await installJava();
+    await installJava()
 
     // install cocoapods
     await installPods()
