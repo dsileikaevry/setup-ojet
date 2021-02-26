@@ -18,8 +18,8 @@ export async function installCordova(version?: string): Promise<void> {
   // await installNpmPkg('cordova-res');
 
   // Fix access permissions
-  await exec2(`sudo chown -R $USER:$GROUP ~/.npm`)
-  await exec2(`sudo chown -R $USER:$GROUP ~/.config`)
+  await exec2(`chown -R $USER:$GROUP ~/.npm`)
+  await exec2(`chown -R $USER:$GROUP ~/.config`)
 }
 
 /**
@@ -50,7 +50,7 @@ export async function installJava(): Promise<void> {
  */
 export async function installPods(): Promise<void> {
   if (process.platform === 'darwin') {
-    await exec2(`sudo gem install cocoapods`)
+    await exec2(`gem install cocoapods`)
   }
 }
 
@@ -85,7 +85,7 @@ export async function installNpmPkg(
   }
 
   // install npm package
-  await exec2(`sudo npm install -g ${pkg}${version ? `@${version}` : ''}`)
+  await exec2(`npm install -g ${pkg}${version ? `@${version}` : ''}`)
 
   let installedPath = (await exec2(`echo $(npm root -g)/${pkg}`)) as string
   if (!installedPath) {
