@@ -17,7 +17,7 @@ inputs:
     default: false
   install-pods:
     description: Whether to install CocoaPods
-    default: false
+    default: true
 
 runs:
   using: 'node12'
