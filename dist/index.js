@@ -6770,6 +6770,9 @@ exports.installCordova = installCordova;
 function installOjet(version) {
     return __awaiter(this, void 0, void 0, function* () {
         yield installNpmPkg('@oracle/ojet-cli', version);
+        // await installNpmPkg('@oracle/oraclejet-tooling', version)
+        // https://www.npmjs.com/package/@oracle/grunt-oraclejet
+        // await installNpmPkg('@oracle/grunt-oraclejet', '6.2.0')
     });
 }
 exports.installOjet = installOjet;
