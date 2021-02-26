@@ -4,7 +4,7 @@ import {
   installCordova,
   installOjet,
   // installJava,
-  installPods,
+  // installPods,
   logInstalledInfo
 } from './installer'
 
@@ -28,7 +28,8 @@ async function run(): Promise<void> {
     // await installJava()
 
     // install cocoapods
-    await installPods()
+    // TODO self-hosted error
+    // await installPods()
 
     // run `ionic info`
     await logInstalledInfo()
