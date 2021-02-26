@@ -1981,7 +1981,8 @@ function run() {
             // install specific version of java and gradle
             // await installJava()
             // install cocoapods
-            yield installer_1.installPods();
+            // TODO self-hosted error
+            // await installPods()
             // run `ionic info`
             yield installer_1.logInstalledInfo();
         }
