@@ -33,4 +33,4 @@ jobs:
       run: | 
         ojet create myHybridApp
         cd myHybridApp 
-        # ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer
+        ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer
