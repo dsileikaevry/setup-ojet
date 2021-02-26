@@ -29,9 +29,9 @@ export async function installCordova(version?: string): Promise<void> {
  */
 export async function installOjet(version?: string): Promise<void> { 
   await installNpmPkg('@oracle/ojet-cli', version)
-  await installNpmPkg('@oracle/oraclejet-tooling', version)
+  // await installNpmPkg('@oracle/oraclejet-tooling', version)
   // https://www.npmjs.com/package/@oracle/grunt-oraclejet
-  await installNpmPkg('@oracle/grunt-oraclejet', '6.2.0')
+  // await installNpmPkg('@oracle/grunt-oraclejet', '6.2.0')
 }
 
 /**
