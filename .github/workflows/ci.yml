@@ -13,8 +13,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '12'
-    - run: | 
-        npm config set unsafe-perm true
+    - run: |  
         npm ci
         npm run all
   test: # make sure the action works on a clean machine without building
@@ -32,6 +31,6 @@ jobs:
       uses: ./
     - name: Create test Oracle JET application
       run: | 
-        ojet create myHybridApp
-        cd myHybridApp 
-        ojet add hybrid --platform=android --appid="com.oracle.myApp" --appname="My App" --template=navdrawer
+        ojet create myHybridApp --hybrid --platforms=android,ios --appid="com.oracle.myApp" --appname="My App" --template=navdrawer
+        cd myHybridApp  
+        ojet build android
