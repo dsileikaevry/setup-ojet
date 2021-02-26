@@ -6757,8 +6757,8 @@ function installCordova(version) {
         // https://github.com/ionic-team/cordova-res
         // await installNpmPkg('cordova-res');
         // Fix access permissions
-        yield exec2(`sudo chown -R $USER:$GROUP ~/.npm`);
-        yield exec2(`sudo chown -R $USER:$GROUP ~/.config`);
+        yield exec2(`chown -R $USER:$GROUP ~/.npm`);
+        yield exec2(`chown -R $USER:$GROUP ~/.config`);
     });
 }
 exports.installCordova = installCordova;
@@ -6795,7 +6795,7 @@ exports.installJava = installJava;
 function installPods() {
     return __awaiter(this, void 0, void 0, function* () {
         if (process.platform === 'darwin') {
-            yield exec2(`sudo gem install cocoapods`);
+            yield exec2(`gem install cocoapods`);
         }
     });
 }
@@ -6829,7 +6829,7 @@ function installNpmPkg(pkg, version) {
             }
         }
         // install npm package
-        yield exec2(`sudo npm install -g ${pkg}${version ? `@${version}` : ''}`);
+        yield exec2(`npm install -g ${pkg}${version ? `@${version}` : ''}`);
         let installedPath = (yield exec2(`echo $(npm root -g)/${pkg}`));
         if (!installedPath) {
             return;
