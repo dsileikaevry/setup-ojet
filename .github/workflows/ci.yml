@@ -34,6 +34,10 @@ jobs:
       uses: joschi/setup-jdk@v2 
       with:
         java-version: '8'
+    - uses: actions/setup-node@v2
+      with:
+        # Issue: https://stackoverflow.com/a/62514416
+        node-version: '12.18.1'
     - name: Use dsileikaevry/setup-ojet
       uses: ./
     - name: Create test Oracle JET application
